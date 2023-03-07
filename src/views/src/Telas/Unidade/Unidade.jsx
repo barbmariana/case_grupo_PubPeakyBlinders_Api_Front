@@ -20,6 +20,7 @@ const Unidade = () => {
             <th>NUMERO</th>
             <th>BAIRRO</th>
             <th>TELEFONE</th>
+            <th>AÇÕES</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +35,10 @@ const Unidade = () => {
                     <td>{unidade.numero_unidade}</td>
                     <td>{unidade.bairro_unidade}</td>
                     <td>{unidade.telefone_unidade}</td>
+                    <td>
+                      <a href={`/unidade/${unidade.id_unidade}`} className="btn btn-primary m-1" >Editar</a>
+                      <a type="button" href="/home" className="btn btn-danger m-1">Excluir</a>
+                    </td>
                   </tr>
                 )
               })

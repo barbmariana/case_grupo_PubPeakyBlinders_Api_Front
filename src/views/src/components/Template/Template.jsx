@@ -1,6 +1,6 @@
 import React from "react";
 //import { Container } from 'reactstrap';
-import Navbar from '../Navbar/NavBar';
+import Navbar from '../Navbar/Navbar'
 
 
 class Template extends React.Component {
