@@ -1,17 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
 const Produto = () => {
   const [produtos, setProdutos] = useState([]);
 
-  axios.get('http://localhost:4200/listProduto').then((res) => {
-    setProdutos(res.data);
-  })
+  useEffect(() => {
+    axios.get('http://localhost:4200/listProduto')
+      .then((res) => {
+        setProdutos(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:4200/deleteProduto/${id}`)
+      .then(() => {
+        setProdutos(produtos.filter((produto) => produto.id_produto !== id));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
-
 
   return (
     <div className="mt-5">

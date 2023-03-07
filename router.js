@@ -23,6 +23,7 @@ routes.post("/createProduto", produto.create);
 routes.get("/listProduto", produto.list);
 routes.get("/searchProduto/:id", produto.findOne);
 routes.put("/updateProduto/:id", produto.update)
+routes.delete("/deleteProduto/:id", produto.deletar)
 
 //Routes Funcionários:
 
