@@ -6,7 +6,7 @@ const conection = require('./src/config/conection');
 
 
 
-conection.sync({ force: true }).then(() => console.log('Banco Rodando!!'));
+conection.sync({ force: false }).then(() => console.log('Banco Rodando!!'));
 const cors = require('cors');
 
 api.use(cors());

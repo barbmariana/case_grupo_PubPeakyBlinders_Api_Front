@@ -48,7 +48,7 @@ module.exports = {
             const produtoUpdate = await ModelProduto.update(
                 {
                     nome_produto: req.body.nome_produto || produto.nome_produto,
-                    preco_produto: req.body.preco_produto || produto.preco_produto ,
+                    preco_produto: req.body.preco_produto || produto.preco_produto,
                     img_produto: req.body.img_produto || produto.img_produto,
                     descricao: req.body.descricao || produto.descricao,
                     data_criacao: produto.data_criacao,
@@ -63,6 +63,19 @@ module.exports = {
             return res.send("Produto atualizado com sucesso")
         } catch (error) {
             return console.error("Error", error)
+        }
+    },
+
+    async deletar(req, res) {
+        const id = req.params.id;
+        if (!isNaN(id)) {
+            ModelProduto.destroy({
+                where: { id_produto: id }
+            }).then(() => {
+                return res.send('porduto deletado')
+            }).catch((err) => {
+                return res.sendStatus(404)
+            })
         }
     }
 }
