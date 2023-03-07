@@ -17,6 +17,8 @@ import Funcionario from '../Telas/Funcionario/Funcionario';
 import NovoFuncionario from '../Telas/Funcionario/NovoFuncionario';
 import EditarFuncionario from '../Telas/Funcionario/EditarFuncionario';
 
+import Home from '../Telas/Home'
+
 
 
 
@@ -27,6 +29,8 @@ class Rotas extends React.Component {
             <BrowserRouter>
                 <Template>
                     <Routes>
+                        {/*pagina inicial*/}
+                        <Route path='/' element={<Home/>} />
                         {/* tabela unidade */}
                         <Route path='/unidades' element={<Unidade />} />
                         <Route path='/unidade/:id' element={<EditarUnidade />} />
