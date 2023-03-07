@@ -10,6 +10,9 @@ import NovaUnidade from '../Telas/Unidade/NovaUnidade';
 import Produto from '../Telas/Produto/Produto';
 import NovoProduto from '../Telas/Produto/NovoProduto';
 import EditarProduto from '../Telas/Produto/EditarProduto';
+import Fornecedor from '..//Telas/Fornecedor/Fornecedor'
+import EditarFornecedor from '../Telas/Fornecedor/EditarFornecedor';
+import NovoFornecedor from '../Telas/Fornecedor/NovoFornecedor';
 
 
 
@@ -33,7 +36,10 @@ class Rotas extends React.Component {
                         <Route path='/produtos' element={<Produto />} />
                         <Route path='/produto/create' element={<NovoProduto />} />
                         <Route path='/produto/:id' element={<EditarProduto />} />
-
+                        {/*fornecedor*/}
+                        <Route path='/fornecedores' element={<Fornecedor />} />
+                        <Route path='/fornecedores/create' element={<NovoFornecedor />} />
+                        <Route path='/fornecedores/:id' element={<EditarFornecedor />} />
                     </Routes>
                 </Template>
             </BrowserRouter>
