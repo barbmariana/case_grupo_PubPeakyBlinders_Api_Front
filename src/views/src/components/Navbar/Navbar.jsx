@@ -33,6 +33,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/fornecedores">Fornecedores</NavLink>
+              <NavLink to="/funcionario">Funcionarios</NavLink>
             </li>
            
           </ul>
