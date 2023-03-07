@@ -27,14 +27,14 @@ const Fornecedor = () => {
         <tbody>
           {
             fornecedor.length > 0 ? (
-              unidades.map((fornecedor) => {
+              fornecedor.map((fornecedor) => {
                 return (
                   <tr key={fornecedor.id_fornecedor}>
                     <td>{fornecedor.id_fornecedor}</td>
                     <td>{fornecedor.nome_fornecedor}</td>
                     <td>
                       <a href={`/fornecedores/${fornecedor.id_fornecedor}`} className="btn btn-primary m-1" >Editar</a>
-                      <a type="button" href="/fornecedores" className="btn btn-danger m-1" onClick={() => handleDelete(forncedor.id_fornecedor)}>Excluir</a>
+                      <a type="button" href="/fornecedores" className="btn btn-danger m-1" onClick={() => handleDelete(fornecedor.id_fornecedor)}>Excluir</a>
                     </td>
                   </tr>
                 )
