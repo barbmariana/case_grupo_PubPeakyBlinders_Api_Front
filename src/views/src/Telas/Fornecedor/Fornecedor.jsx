@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 const Fornecedor = () => {
   const [fornecedor, setFornecedor] = useState([]);
 
-  axios.get('http://localhost:4200/fornecedores').then((res) => {
-    setFornecedor(res.data);
-  })
+  useEffect(() => {
+    axios.get('http://localhost:4200/fornecedores').then((res) => {
+      setFornecedor(res.data);
+    })
+  }, [])
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:4200/fornecedores/${id}`)

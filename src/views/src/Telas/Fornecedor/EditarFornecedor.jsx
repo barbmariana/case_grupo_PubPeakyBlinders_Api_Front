@@ -3,18 +3,17 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 
-const EditarFornecedor= () => {
+const EditarFornecedor = () => {
 
   const { id } = useParams();
   const [fornecedor, setFornecedor] = useState({
-    id:"",
+    id: "",
     nome_fornecedor: ""
   });
   console.log(fornecedor);
 
   useEffect(() => {
-    axios.get(`http://localhost:4200/forncedores/${id}`).then((res) => {
-      console.log(res.data.data_criacao);
+    axios.get(`http://localhost:4200/fornecedores/${id}`).then((res) => {
       setFornecedor(res.data);
     });
   }, [id]);
