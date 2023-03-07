@@ -7,6 +7,9 @@ import Home2 from '../Telas/Home2';
 import Unidade from '../Telas/Unidade/Unidade';
 import EditarUnidade from '../Telas/Unidade/EditarUnidade';
 import NovaUnidade from '../Telas/Unidade/NovaUnidade';
+import Produto from '../Telas/Produto/Produto';
+import NovoProduto from '../Telas/Produto/NovoProduto';
+import EditarProduto from '../Telas/Produto/EditarProduto';
 
 
 
@@ -26,6 +29,11 @@ class Rotas extends React.Component {
                         <Route path='/unidades' element={<Unidade />} />
                         <Route path='/unidade/:id' element={<EditarUnidade />} />
                         <Route path='/unidade/create' element={<NovaUnidade />} />
+                        {/* produtos */}
+                        <Route path='/produtos' element={<Produto />} />
+                        <Route path='/produto/create' element={<NovoProduto />} />
+                        <Route path='/produto/:id' element={<EditarProduto />} />
+
                     </Routes>
                 </Template>
             </BrowserRouter>

@@ -14,7 +14,8 @@ const Unidade = () => {
 
 
   return (
-    <div className="container">
+    <div className="">
+      <h1>Unidades</h1>
       <table className="table table-striped table-hover table-bordered border-dark mt-3">
         <thead>
           <tr>

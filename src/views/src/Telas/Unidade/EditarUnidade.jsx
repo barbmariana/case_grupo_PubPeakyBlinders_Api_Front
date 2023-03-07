@@ -26,7 +26,7 @@ const EditarUnidade = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className=" mt-5">
       <h1>Editar Produto</h1>
       <form>
         <div className="form-group">

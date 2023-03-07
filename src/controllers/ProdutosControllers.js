@@ -72,7 +72,7 @@ module.exports = {
             ModelProduto.destroy({
                 where: { id_produto: id }
             }).then(() => {
-                return res.send('porduto deletado')
+                return res.send('produto deletado')
             }).catch((err) => {
                 return res.sendStatus(404)
             })

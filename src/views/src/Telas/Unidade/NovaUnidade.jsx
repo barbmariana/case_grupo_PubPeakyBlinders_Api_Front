@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const NovaUnidade = () => {
@@ -15,11 +15,11 @@ const NovaUnidade = () => {
     await axios.post(`http://localhost:4200/unidade/`, unidade);
   };
 
-  
+
 
   return (
-    <div className="container mt-5">
-      <h1>Editar Produto</h1>
+    <div className=" mt-5">
+      <h1>Nova Unidade</h1>
       <form>
         <div className="form-group">
           <label className='fw-bold m-2 ' htmlFor="cep">CEP</label>
