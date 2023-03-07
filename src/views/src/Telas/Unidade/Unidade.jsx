@@ -8,6 +8,10 @@ const Unidade = () => {
     setUnidades(res.data);
   })
 
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:4200/unidade/${id}`)
+  }
+
 
   return (
     <div className="container">
@@ -37,7 +41,7 @@ const Unidade = () => {
                     <td>{unidade.telefone_unidade}</td>
                     <td>
                       <a href={`/unidade/${unidade.id_unidade}`} className="btn btn-primary m-1" >Editar</a>
-                      <a type="button" href="/home" className="btn btn-danger m-1">Excluir</a>
+                      <a type="button" href="/unidades" className="btn btn-danger m-1" onClick={() => handleDelete(unidade.id_unidade)}>Excluir</a>
                     </td>
                   </tr>
                 )
@@ -50,6 +54,11 @@ const Unidade = () => {
           }
         </tbody>
       </table>
+      <div className="row">
+        <div className="col">
+          <a className="btn btn-success" href="/unidade/create">Cadastrar nova unidade</a>
+        </div>
+      </div>
     </div>
   )
 }

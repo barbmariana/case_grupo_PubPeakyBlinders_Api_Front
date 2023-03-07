@@ -6,6 +6,7 @@ import Deletar from '../Telas/Deletar'
 import Home2 from '../Telas/Home2';
 import Unidade from '../Telas/Unidade/Unidade';
 import EditarUnidade from '../Telas/Unidade/EditarUnidade';
+import NovaUnidade from '../Telas/Unidade/NovaUnidade';
 
 
 
@@ -24,6 +25,7 @@ class Rotas extends React.Component {
                         {/* tabela unidade */}
                         <Route path='/unidades' element={<Unidade />} />
                         <Route path='/unidade/:id' element={<EditarUnidade />} />
+                        <Route path='/unidade/create' element={<NovaUnidade />} />
                     </Routes>
                 </Template>
             </BrowserRouter>

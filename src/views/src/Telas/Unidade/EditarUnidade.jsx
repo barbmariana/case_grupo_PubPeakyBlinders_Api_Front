@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const EditarUnidade = () => {
 
@@ -37,7 +37,7 @@ const EditarUnidade = () => {
             id="cep"
             name="cep"
             value={unidade.cep_unidade}
-          onChange={(e) => setProduto({ ...unidade, cep_unidade: e.target.value })}
+          onChange={(e) => setUnidade({ ...unidade, cep_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -48,7 +48,7 @@ const EditarUnidade = () => {
             id="rua"
             name="rua"
             value={unidade.rua_unidade}
-          onChange={(e) => setProduto({ ...unidade, rua_unidade: e.target.value })}
+          onChange={(e) => setUnidade({ ...unidade, rua_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -59,7 +59,7 @@ const EditarUnidade = () => {
             id="numero"
             name="numero"
             value={unidade.numero_unidade}
-          onChange={(e) => setProduto({ ...unidade, numero_unidade: e.target.value })}
+          onChange={(e) => setUnidade({ ...unidade, numero_unidade: e.target.value })}
           />
         </div>
 
@@ -71,7 +71,7 @@ const EditarUnidade = () => {
             id="bairro"
             name="bairro"
             value={unidade.bairro_unidade}
-          onChange={(e) => setProduto({ ...unidade, bairro_unidade: e.target.value })}
+          onChange={(e) => setUnidade({ ...unidade, bairro_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -82,11 +82,11 @@ const EditarUnidade = () => {
             id="telefone"
             name="telefone"
             value={unidade.telefone_unidade}
-          onChange={(e) => setProduto({ ...unidade, telefone_unidade: e.target.value })}
+          onChange={(e) => setUnidade({ ...unidade, telefone_unidade: e.target.value })}
           />
         </div>
         <div className='mt-2' >
-          <a onClick={handleSubmit} type="button" className="btn btn-primary">
+          <a href='/unidades' onClick={handleSubmit} type="button" className="btn btn-primary">
             Salvar
           </a>
         </div>

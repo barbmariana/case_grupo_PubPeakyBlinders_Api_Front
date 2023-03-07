@@ -1,25 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const NovaUnidade = () => {
   const [unidade, setUnidade] = useState({
-    id: id,
     cep_unidade: "",
     rua_unidade: "",
     numero_unidade: "",
     bairro_unidade: "",
     telefone_unidade: ""
   });
-
-  useEffect(() => {
-    axios.get(`http://localhost:4200/unidade/${id}`).then((res) => {
-      console.log(res.data);
-      setUnidade(res.data);
-    });
-  }, [id]);
+  console.log(unidade);
 
   const handleSubmit = async (e) => {
-    await axios.put(`http://localhost:4200/unidade/${id}`, unidade);
+    await axios.post(`http://localhost:4200/unidade/`, unidade);
   };
+
+  
 
   return (
     <div className="container mt-5">
@@ -32,7 +28,7 @@ const NovaUnidade = () => {
             className="form-control"
             id="cep"
             name="cep"
-            onChange={(e) => setProduto({ ...unidade, cep_unidade: e.target.value })}
+            onChange={(e) => setUnidade({ ...unidade, cep_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -42,7 +38,7 @@ const NovaUnidade = () => {
             className="form-control"
             id="rua"
             name="rua"
-            onChange={(e) => setProduto({ ...unidade, rua_unidade: e.target.value })}
+            onChange={(e) => setUnidade({ ...unidade, rua_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -52,7 +48,7 @@ const NovaUnidade = () => {
             className="form-control"
             id="numero"
             name="numero"
-            onChange={(e) => setProduto({ ...unidade, numero_unidade: e.target.value })}
+            onChange={(e) => setUnidade({ ...unidade, numero_unidade: e.target.value })}
           />
         </div>
 
@@ -63,7 +59,7 @@ const NovaUnidade = () => {
             className="form-control"
             id="bairro"
             name="bairro"
-            onChange={(e) => setProduto({ ...unidade, bairro_unidade: e.target.value })}
+            onChange={(e) => setUnidade({ ...unidade, bairro_unidade: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -73,11 +69,11 @@ const NovaUnidade = () => {
             className="form-control"
             id="telefone"
             name="telefone"
-            onChange={(e) => setProduto({ ...unidade, telefone_unidade: e.target.value })}
+            onChange={(e) => setUnidade({ ...unidade, telefone_unidade: e.target.value })}
           />
         </div>
         <div className='mt-2' >
-          <a onClick={handleSubmit} type="button" className="btn btn-primary">
+          <a href='/unidades' onClick={handleSubmit} type="button" className="btn btn-primary">
             Salvar
           </a>
         </div>
