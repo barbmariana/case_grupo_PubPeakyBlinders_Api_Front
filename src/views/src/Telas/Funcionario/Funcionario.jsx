@@ -57,7 +57,7 @@ const Funcionario = () => {
       </table>
       <div className="row">
         <div className="col">
-          <a className="btn btn-success" href="/funcionario/create">Cadastrar novo produto</a>
+          <a className="btn btn-success" href="/funcionario/create">Cadastrar novo funcionario</a>
         </div>
       </div>
     </div>

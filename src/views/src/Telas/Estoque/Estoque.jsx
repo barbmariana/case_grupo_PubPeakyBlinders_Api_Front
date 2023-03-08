@@ -62,7 +62,7 @@ export default function Estoque() {
             </table>
             <div className="row">
                 <div className="col">
-                    <a className="btn btn-success" href="/estoque/create">Cadastrar novo produto</a>
+                    <a className="btn btn-success" href="/estoque/create">Cadastrar estoque</a>
                 </div>
             </div>
         </div>
