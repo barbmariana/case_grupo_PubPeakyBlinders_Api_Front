@@ -28,7 +28,7 @@ export default function Estoque() {
     }
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 p-5">
             <h1>Produtos</h1>
             <table className="table table-striped table-hover table-bordered border-dark mt-3">
                 <thead>

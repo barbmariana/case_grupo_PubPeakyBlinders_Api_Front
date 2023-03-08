@@ -29,7 +29,7 @@ export default function EditarEstoque() {
     }
 
     return (
-        <div className="mt-5" >
+        <div className="mt-5 p-5" >
             <h1>Novo Estoque</h1>
             <form>
                 <div className="form-group">

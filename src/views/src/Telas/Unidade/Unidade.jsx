@@ -16,7 +16,7 @@ const Unidade = () => {
 
 
   return (
-    <div className="">
+    <div className="mt-5 p-5">
       <h1>Unidades</h1>
       <table className="table table-striped table-hover table-bordered border-dark mt-3">
         <thead>

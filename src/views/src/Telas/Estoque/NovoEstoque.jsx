@@ -14,7 +14,7 @@ export default function NovoEstoque() {
         await axios.post(`http://localhost:4200/estoqueCreate`, estoque);
     }
     return (
-        <div className="mt-5">
+        <div className="mt-5 p-5">
             <h1>Novo Estoque</h1>
             <form>
                 <div className="form-group">

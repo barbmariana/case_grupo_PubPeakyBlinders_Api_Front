@@ -22,7 +22,7 @@ const EditarFuncionario = () => {
   };
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 p-5">
       <h1>Editar Funcionario</h1>
       <form>
         <div className="form-group">
