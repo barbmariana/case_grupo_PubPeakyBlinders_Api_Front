@@ -63,12 +63,12 @@ class Home extends React.Component {
   }
 
   async getUnidade() {
-    const api = await fetch("http://localhost:4200/unidade");
+    const api = await fetch("http://localhost:4200/unidades");
     let data = await api.json()
     this.setState({ unidade: data })
   }
   async getFornecedor() {
-    const api = await fetch("http://localhost:4200/fornecedor");
+    const api = await fetch("http://localhost:4200/fornecedores");
     let data = await api.json()
     this.setState({ fornecedor: data })
   }
