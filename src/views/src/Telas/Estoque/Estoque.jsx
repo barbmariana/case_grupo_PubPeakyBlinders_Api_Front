@@ -35,6 +35,7 @@ export default function Estoque() {
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Quantidade Disponivel</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
