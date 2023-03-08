@@ -18,6 +18,9 @@ import NovoFuncionario from '../Telas/Funcionario/NovoFuncionario';
 import EditarFuncionario from '../Telas/Funcionario/EditarFuncionario';
 
 import Home from '../Telas/Home'
+import Estoque from '../Telas/Estoque/Estoque';
+import NovoEstoque from '../Telas/Estoque/NovoEstoque';
+import EditarEstoque from '../Telas/Estoque/EditarEstoque';
 
 
 
@@ -30,7 +33,7 @@ class Rotas extends React.Component {
                 <Template>
                     <Routes>
                         {/*pagina inicial*/}
-                        <Route path='/' element={<Home/>} />
+                        <Route path='/' element={<Home />} />
                         {/* tabela unidade */}
                         <Route path='/unidades' element={<Unidade />} />
                         <Route path='/unidade/:id' element={<EditarUnidade />} />
@@ -47,6 +50,10 @@ class Rotas extends React.Component {
                         <Route path='/funcionarios' element={<Funcionario />} />
                         <Route path='/funcionario/create' element={<NovoFuncionario />} />
                         <Route path='/funcionario/:id' element={<EditarFuncionario />} />
+
+                        <Route path='/estoque' element={<Estoque />} />
+                        <Route path='/estoque/create' element={<NovoEstoque />} />
+                        <Route path='/estoque/:id' element={<EditarEstoque />} />
 
                     </Routes>
                 </Template>

@@ -13,34 +13,34 @@ Produtos.init({
     },
     nome_produto: {
         type: DataTypes.STRING,
-        allowNull : false
+        allowNull: false
     },
     preco_produto: {
         type: DataTypes.FLOAT,
         allowNull: false
     },
-    img_produto:{
+    img_produto: {
         type: DataTypes.STRING,
     },
-    descricao:{
+    descricao: {
         type: DataTypes.STRING,
     },
-    data_criacao:{
+    data_criacao: {
         type: DataTypes.DATE,
     },
-    data_atualizacao:{
+    data_atualizacao: {
         type: DataTypes.DATE,
     }
-    
+
 
 
 }, {
     sequelize,
-     modelName: 'produtos',
-     timestamps: false
+    modelName: 'produtos',
+    timestamps: false
 })
 
 Categoria.hasMany(Produtos);
 Produtos.belongsTo(Categoria);
 
-module.exports = Produtos ;
+module.exports = Produtos;

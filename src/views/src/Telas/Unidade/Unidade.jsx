@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
 const Unidade = () => {
   const [unidades, setUnidades] = useState([]);
 
-  axios.get('http://localhost:4200/unidades').then((res) => {
-    setUnidades(res.data);
-  })
+  useEffect(() => {
+    axios.get('http://localhost:4200/unidades').then((res) => {
+      setUnidades(res.data);
+    })
+  }, [])
 
   const handleDelete = (id) => {
     axios.delete(`http://localhost:4200/unidade/${id}`)

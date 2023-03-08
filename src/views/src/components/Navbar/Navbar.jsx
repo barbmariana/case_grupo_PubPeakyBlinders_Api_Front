@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
-          <li>
+            <li>
               <NavLink to="/">Início</NavLink>
             </li>
             <li>
@@ -33,11 +33,14 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink to="/fornecedores">Fornecedores</NavLink>
-              
+
             </li>
             <li>
-            <NavLink to="/funcionarios">Funcionarios</NavLink>
-            </li>           
+              <NavLink to="/funcionarios">Funcionarios</NavLink>
+            </li>
+            <li>
+              <NavLink to="/estoque">Estoque</NavLink>
+            </li>
           </ul>
         </div>
       </div>

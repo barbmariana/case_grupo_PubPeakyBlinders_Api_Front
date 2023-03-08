@@ -2,8 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const Categoria = require('./Categoria');
 const sequelize = require('../config/conection');
 const Produtos = require('./Produtos');
-const Funcionario = require ('./Funcionario')
-const Unidade = require ('./Unidade')
+const Funcionario = require('./Funcionario')
+const Unidade = require('./Unidade')
 
 class Estoque extends Model { }
 
@@ -15,13 +15,10 @@ Estoque.init({
         primaryKey: true
     },
     quantidade_produto: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false
 
     },
-
-
-
 }, {
     sequelize,
     modelName: 'Estoque',
